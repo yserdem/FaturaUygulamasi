@@ -1,0 +1,377 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+strong {
+	font-weight: bold;
+}
+
+.frame {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
+
+.frame .div {
+	width: 1280px;
+	position: relative;
+}
+
+.frame table.costs-table {
+	width: 331px;
+	font-size: 12px;
+	position: relative;
+	float: right;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.frame .services_costs-container {
+	position: relative;
+	width: 776px;
+	height: fit-content;
+}
+
+.frame .costs-table th {
+	text-align: right;
+	font-weight: bold;
+	padding-right: 3px;
+}
+
+.frame .costs-table td {
+	text-align: right;
+	padding-right: 2px;
+}
+
+.frame .overlap-2 {
+	position: absolute;
+	width: 775px;
+	height: 410px;
+	top: 6px;
+	left: 251px;
+}
+
+.frame .ettn {
+	position: absolute;
+	width: 283px;
+	height: 27px;
+	top: 383px;
+	left: 0;
+	font-size: 11px;
+	padding-top: 11px;
+
+}
+
+.frame .buyer {
+	position: absolute;
+	width: 283px;
+	height: 111px;
+	top: 274px;
+	left: 0;
+	border-bottom: 3px solid;
+	border-color: #000000;
+	padding: 0px;
+	font-size: 12px;
+}
+
+
+.frame .seller {
+	position: absolute;
+	width: 283px;
+	height: 131px;
+	top: 0;
+	left: 0;
+	font-size: 12px;
+	border-bottom: 3px solid;
+	border-top: 3px solid;
+	border-color: #000000;
+	padding-top: 9px;
+}
+
+.frame .invoice-info {
+	position: absolute;
+	width: 297px;
+	height: 138px;
+	top: 254px;
+	left: 478px;
+}
+
+.frame .overlap-group-2 {
+	position: relative;
+	width: 299px;
+	height: 140px;
+	top: -1px;
+	left: -1px;
+}
+
+.frame .invoice-info-header {
+	width: 114px;
+	left: 0;
+	position: absolute;
+	height: 140px;
+	top: 0;
+	font-size: 11px;
+	border: 1px solid;
+	border-color: #000000;
+	border-collapse: collapse;
+}
+
+.frame .invoice-info-body {
+	width: 187px;
+	left: 114px;
+	position: absolute;
+	height: 140px;
+	top: 0;
+	border: 1px solid;
+	border-color: #000000;
+	font-size: 11px;
+	border-collapse: collapse;
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+}
+
+th,
+td {
+	padding: 0px;
+	text-align: left;
+}
+
+.frame .img-container_vergiDairesi {
+	top: 66px;
+	position: absolute;
+	width: 198px;
+	height: 130px;
+	left: 281px;
+
+}
+
+.frame .img-container_imza {
+	top: 194px;
+	position: absolute;
+	width: 198px;
+	height: 130px;
+	left: 281px;
+
+}
+
+.img-container_vergiDairesi img,
+.img-container_imza img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+.frame .services_costs-container .services {
+	width: inherit;
+}
+
+
+.frame .services th {
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.frame .services td {
+	font-size: 12px;
+	padding: 3px;
+	text-align: left;
+}
+
+.frame .services td.right {
+	text-align: right;
+}
+
+.frame .footer {
+	position: relative;
+	border: 1px solid black;
+	width: 769px;
+	height: 92px;
+	padding: 3px;
+	
+}
+
+.frame .upper-foot-note {
+	position: absolute;
+	width: 774px;
+	height: 39px;
+	top: -1px;
+	left: -1px;
+	font-size: 12px;
+	padding: 3px;
+}
+
+.frame .overlap-3 {
+	position: relative;
+	width: 774px;
+	height: 50px;
+	top: 43px;
+	left: -1px;
+}
+
+.frame .lower-foot-note {
+	position: absolute;
+	width: 774px;
+	height: 16px;
+	top: 0;
+	left: 0;
+	font-size: 12px;
+}
+
+.frame .aciklama {
+	position: absolute;
+	width: 774px;
+	height: 36px;
+	top: 14px;
+	left: 0;
+	font-size: 12px;
+}
+
+.costs_footer {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 774px;
+	height: fit-content;
+	left: 251px;
+	top: 421px;
+}
