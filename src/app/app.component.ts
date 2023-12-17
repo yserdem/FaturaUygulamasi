@@ -100,10 +100,10 @@ public openPDF(): void {
 
       let PDF = new jsPDF('p', 'mm', 'a4');
       
-      // Add content of the first element
+      
       PDF.addImage(FILEURI_top, 'PNG', 0, 10, fileWidth, fileHeight_top);
 
-      // Add content of the second element below the first
+      
       PDF.addImage(FILEURI_bottom, 'PNG', 0, fileHeight_top + 20, fileWidth, fileHeight_bottom);
 
       PDF.save('combined-pdf.pdf');
