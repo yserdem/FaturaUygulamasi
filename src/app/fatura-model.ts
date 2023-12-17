@@ -7,6 +7,8 @@ export class faturaModel {
     fiyatBilgileri: any;
     altNotlar: any;
 
+    jsonData : any;
+
     constructor() {
         this.alici = {
             "ad": "aliciAdi",
@@ -44,12 +46,12 @@ export class faturaModel {
         };
         this.fiyatBilgileri = {
             "malHizmetToplamTutari": "12345TL",
-            "toplamİskonto": "0,00TL",
+            "toplamIskonto": "0,00TL",
             "hesaplananKdv": "1231TL",
             "kdvDahilToplamTutar": "88888TL",
             "hesaplananKdvTevfikati": "111TL",
-            "tevfikataTabiİslemTutari": "1231545TL",
-            "tevfikataTabiİslemUzerindenKdv": "1231TL",
+            "tevfikataTabiIslemTutari": "1231545TL",
+            "tevfikataTabiIslemUzerindenKdv": "1231TL",
             "odenecekTutar": "12313TL"
         };
         this.altNotlar = {
@@ -59,7 +61,7 @@ export class faturaModel {
             "banka": "Cepbak",
             "dovizTuru": "TL",
             "aciklama": "genel kasa",
-            "alt_aciklama": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices purus id ipsum tincidunt dignissim. Praesent dignissim massa q"
+            "alt_aciklama": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget erat fermentum, consectetur lacus et, consectetur ligula. Aliquam lorem augue, accumsan in diam vel, accumsan venenatis dui"
         }
     };
 }

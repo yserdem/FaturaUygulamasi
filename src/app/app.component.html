@@ -1,8 +1,10 @@
 <div class="frame">
-    <div class="div">
-        <div class="overlap-2">
+    <button type="button" (click)="openPDF()">Download PDF</button>
+    <div id="pdf-selector" class="div-container">
+        <div id = "pdf-selector-top"class="overlap-2">
             <div class="ettn">
-                <p><strong>ETTN:</strong> gfsdsfbghgfdcvgfd</p>
+                <p><strong>ETTN:</strong> {{getEttn()}}</p>
+
             </div>
             <div class="buyer">
                 <P>
@@ -60,31 +62,31 @@
                     </table>
                     <table class="invoice-info-body">
                         <tr>
-                            <td>TR1.2</td>
+                            <td>{{getFaturaBilgileri().ozellestirmeNo}}</td>
                         </tr>
                         <tr>
-                            <td>EARSIVFTURA</td>
+                            <td>{{getFaturaBilgileri().senaryo}}</td>
                         </tr>
                         <tr>
-                            <td>Tevfikat</td>
+                            <td>{{getFaturaBilgileri().faturaTipi}}</td>
                         </tr>
                         <tr>
-                            <td>dfgsfadsg</td>
+                            <td>{{getFaturaBilgileri().faturaNo}}</td>
                         </tr>
                         <tr>
-                            <td>13-46-1220</td>
+                            <td>{{getFaturaBilgileri().faturaTarihi}}</td>
                         </tr>
                         <tr>
-                            <td>11:58:00</td>
+                            <td>{{getFaturaBilgileri().faturaSaati}}</td>
                         </tr>
                         <tr>
-                            <td>07-02-2023 11:58:00</td>
+                            <td>{{getFaturaBilgileri().gonderimTarihi}}</td>
                         </tr>
                         <tr>
-                            <td>mhgfçfgm2dgf2fsf52</td>
+                            <td>{{getFaturaBilgileri().muhasebeFaturaNo}}</td>
                         </tr>
                         <tr>
-                            <td>DiğerGerçekMağaza</td>
+                            <td>{{getFaturaBilgileri().satisKanali}}</td>
                         </tr>
                     </table>
                 </div>
@@ -96,7 +98,7 @@
                 <img src="../assets/imza.jpg" alt="İmza-Kaşe">
             </div>
         </div>
-        <div class="costs_footer">
+        <div id="pdf-selector-bottom" class="costs_footer">
             <div class="services_costs-container">
                 <table class="services">
                     <thead>
@@ -127,61 +129,58 @@
                 <table class="costs-table">
                     <tr>
                         <th>Mal Hizmet Toplam Tutarı</th>
-                        <td>6.779,66TL</td>
+                        <td>{{getFiyatBilgileri().malHizmetToplamTutari}}</td>
                     </tr>
                     <tr>
                         <th>Toplam İskonto</th>
-                        <td>0,00TL</td>
+                        <td>{{getFiyatBilgileri().toplamIskonto}}</td>
                     </tr>
                     <tr>
                         <th>Hesaplanan KDV(%18)</th>
-                        <td>1.220,34TL</td>
+                        <td>{{getFiyatBilgileri().hesaplananKdv}}</td>
                     </tr>
                     <tr>
                         <th>KDV Dahil Toplam Tutar</th>
-                        <td>8.000,00TL</td>
+                        <td>{{getFiyatBilgileri().kdvDahilToplamTutar}}</td>
                     </tr>
                     <tr>
                         <th>Hesaplanan KDV Tevkifat (%50)</th>
-                        <td>610,17TL</td>
+                        <td>{{getFiyatBilgileri().hesaplananKdvTevfikati}}</td>
                     </tr>
                     <tr>
                         <th>Tevkifata Tabi İşlem Tutarı</th>
-                        <td>6.779,66TL</td>
+                        <td>{{getFiyatBilgileri().tevfikataTabiIslemTutari}}</td>
                     </tr>
                     <tr>
                         <th>Tevkifata Tabi İşlem Üzerinden Hes. KDV</th>
-                        <td>1.220,34TL</td>
+                        <td>{{getFiyatBilgileri().tevfikataTabiIslemUzerindenKdv}}</td>
                     </tr>
                     <tr>
                         <th>Ödenecek Tutar</th>
-                        <td>7.389,83TL</td>
+                        <td>{{getFiyatBilgileri().odenecekTutar}}</td>
                     </tr>
                 </table>
             </div>
             <footer class="footer">
                 <div class="upper-foot-note">
-                    <p> <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tevkifat Sebebi: </strong> 605-ORGANİZASYON HİZMETI
-                        <br>yazıilefiyattutarı
+                    <p> <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tevkifat Sebebi: </strong>
+                        {{getAltNotlar().tevfikatSebebi}}
+                        <br>{{getAltNotlar().faturaTutari}}
                     </p>
                 </div>
                 <div class="overlap-3">
                     <div class="lower-foot-note">
-                        <p><strong>IBAN:</strong> TR000000000000000
-                            <strong>Banka:</strong> Cepbank
-                            <strong>Döviz Türü:</strong> TL
-                            <strong>Açıklama: </strong> genel kasa
+                        <p><strong>IBAN:</strong> {{getAltNotlar().IBAN}}
+                            <strong>Banka:</strong> {{getAltNotlar().banka}}
+                            <strong>Döviz Türü:</strong> {{getAltNotlar().dovizTuru}}
+                            <strong>Açıklama: </strong> {{getAltNotlar().aciklama}}
                         </p>
                     </div>
                     <div class="aciklama">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices purus id ipsum
-                            tincidunt dignissim. Praesent dignissim massa quis pulvinar venenatis. Sed bibendum, risus
-                            in varius sagittis, mauris ex vestibulum ex,</p>
+                        <p>{{getAltNotlar().alt_aciklama}}</p>
                     </div>
                 </div>
             </footer>
         </div>
-        
-
     </div>
 </div>

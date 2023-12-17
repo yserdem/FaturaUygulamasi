@@ -146,8 +146,9 @@ strong {
 	width: 100%;
 }
 
-.frame .div {
+.frame .div-container {
 	width: 1280px;
+	min-height: 100vh;
 	position: relative;
 }
 
@@ -165,6 +166,8 @@ strong {
 	width: 776px;
 	height: fit-content;
 }
+
+
 
 .frame .costs-table th {
 	text-align: right;
@@ -272,6 +275,10 @@ th,
 td {
 	padding: 0px;
 	text-align: left;
+}
+
+.frame .invoice-info-body td{
+	padding-left: 3px;
 }
 
 .frame .img-container_vergiDairesi {

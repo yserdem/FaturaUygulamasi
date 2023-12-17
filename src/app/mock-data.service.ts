@@ -30,7 +30,8 @@ export class MockDataService implements InMemoryDbService {
       "ettn": "someLongLineWithNumbers",
       "ürünler": [
         {
-          "sıraNo": 1, "stokKodu": "qwe12",
+          "sıraNo": 1, 
+          "stokKodu": "qwe12",
           "malHizmet": "verilen Hizmet 1",
           "miktar": "1 adet",
           "birimFiyati": "12345.12TL",
@@ -39,7 +40,8 @@ export class MockDataService implements InMemoryDbService {
           "malHizmetTutari": "12345.12TL"
         },
         {
-          "sıraNo": 2, "stokKodu": "qwe23",
+          "sıraNo": 2, 
+          "stokKodu": "qwe23",
           "malHizmet": "verilen Hizmet 2",
           "miktar": "2 adet",
           "birimFiyati": "123456.12TL",
@@ -77,60 +79,5 @@ export class MockDataService implements InMemoryDbService {
   constructor() { }
 }
 
-/*export type fatura = {
-  satici: {
-    ad: string;
-    adres1: string;
-    adres2: string;
-    posta: string;
-    vergiDairesi: string;
-    vkn: string;
-    ticaretSicilNo: string;
-    mersisNo: string;
-  };
-  alici: {
-    ad: string;
-    adres1: string;
-    adres2: string;
-    posta: string;
-    telNo: string;
-    tckn: string;
-  };
-  ettn: string;
-  ürünler: urun[];
-  faturaBilgileri: {
-    ozellestirmeNo: string;
-    senaryo: string;
-    faturaTipi: string;
-    faturaNo: string;
-    faturaTarihi: string;
-    faturaSaati: string;
-    gonderimTarihi: string;
-    muhasebeFaturaNo: string;
-    satisKanali: string;
-  };
-  fiyatBilgileri: {
-    malHizmetToplamTutari: string;
-    toplamİskonto: string;
-    hesaplananKdv: string;
-    kdvDahilToplamTutar: string;
-    hesaplananKdvTevfikati: string;
-    tevfikataTabiİslemTutari: string;
-    tevfikataTabiİslemUzerindenKdv: string;
-    odenecekTutar: string;
-  };
-  altNotlar: string;
-}
 
-type urun = {
-  sıraNo: number;
-  stokKodu: string;
-  malHizmet: string;
-  miktar: string;
-  birimFiyati: string;
-  kdvOrani: string;
-  kdvTutarı: string;
-  malHizmetTutari: string;
-}
-*/
 

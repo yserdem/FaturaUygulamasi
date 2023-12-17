@@ -18,25 +18,25 @@
     "tckn": "12345678910"
   },
   "ettn": "someLongLineWithNumbers",
-  "ürünler": [
+  "urunler": [
     {
-      "sıraNo": 1,
+      "siraNo": 1,
       "stokKodu": "qwe12",
       "malHizmet": "verilen Hizmet 1",
       "miktar": "1 adet",
       "birimFiyati": "12345.12TL",
-      "kdvOrani": "%18",
-      "kdvTutarı": "111.11TL",
+      "kdvOrani": 18,
+      "kdvTutari": "111.11TL",
       "malHizmetTutari": "12345.12TL"
     },
     {
-      "sıraNo": 2,
+      "siraNo": 2,
       "stokKodu": "qwe23",
       "malHizmet": "verilen Hizmet 2",
       "miktar": "2 adet",
       "birimFiyati": "123456.12TL",
-      "kdvOrani": "%18",
-      "kdvTutarı": "222.22TL",
+      "kdvOrani": 18,
+      "kdvTutari": "222.22TL",
       "malHizmetTutari": "123456.12TL"
     }
   ],
@@ -53,12 +53,12 @@
   },
   "fiyatBilgileri": {
     "malHizmetToplamTutari": "12345TL",
-    "toplamİskonto": "0,00TL",
+    "toplamIskonto": "0,00TL",
     "hesaplananKdv": "1231TL",
     "kdvDahilToplamTutar": "88888TL",
     "hesaplananKdvTevfikati": "111TL",
-    "tevfikataTabiİslemTutari": "1231545TL",
-    "tevfikataTabiİslemUzerindenKdv": "1231TL",
+    "tevfikataTabiIslemTutari": "123TL",
+    "tevfikataTabiIslemUzerindenKdv": "1231TL",
     "odenecekTutar": "12313TL"
   },
   "altNotlar": {
@@ -68,6 +68,6 @@
     "banka": "Cepbak",
     "dovizTuru": "TL",
     "aciklama": "genel kasa",
-    "alt_aciklama": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices purus id ipsum tincidunt dignissim. Praesent dignissim massa q"
+    "alt_aciklama": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget erat fermentum, consectetur lacus et, consectetur ligula. Aliquam lorem augue, accumsan in diam vel, accumsan venenatis dui"
   }
 }
