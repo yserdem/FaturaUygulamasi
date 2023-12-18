@@ -96,15 +96,15 @@ export class AppComponent {
     let DATA: any = document.getElementById('inner_frame');
     console.log(DATA)
     html2canvas(DATA).then((canvas) => {
-      let fileHeight = 97;
-      let fileWidth = ((canvas.width * fileHeight) / canvas.height) +39;
+      let fileWidth = 99;
+      let fileHeight = (canvas.height * fileWidth) / canvas.width +30;
       const FILEURI = canvas.toDataURL('image/png');
-      let PDF = new jsPDF('p', 'mm', 'a4');
+      let PDF = new jsPDF('l', 'mm', 'a4');
       let position = 0;
-      PDF.addImage(FILEURI, 'PNG', 20, position, fileWidth, fileHeight);
-      PDF.addImage(FILEURI, 'PNG', 20, position + fileHeight, fileWidth, fileHeight);
-      PDF.addImage(FILEURI, 'PNG', 20, position + (fileHeight * 2), fileWidth, fileHeight);
-      PDF.save('angular-demo.pdf');
+      PDF.addImage(FILEURI, 'PNG', position, 0, fileWidth, fileHeight);
+      PDF.addImage(FILEURI, 'PNG', position + fileWidth, 0, fileWidth, fileHeight);
+      PDF.addImage(FILEURI, 'PNG', position + (fileWidth * 2), 0, fileWidth, fileHeight);
+      PDF.save('angular-demo-3x.pdf');
     });
   }
 }
