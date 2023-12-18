@@ -1,0 +1,201 @@
+.frame {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.inner_frame {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+}
+
+.outer_frame_left,
+.outer_frame_right {
+    flex: 1;
+}
+
+.upper_half-container,
+.lower_half-container {
+    position: relative;
+    min-height: 45vh;
+    padding: 10px;
+    margin: 10px;
+}
+
+.upper_half-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.adress-containers,
+.invoice_info-container {
+    min-height: inherit;
+    flex: 5;
+}
+
+.img-containers {
+    min-height: inherit;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-containers img {
+    max-width: 100%; 
+    max-height: 100%; 
+    display: block; 
+    margin: auto; 
+}
+
+.adress-containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.invoice_info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.lower_half-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.products-container,
+.costs-container,
+.footer-container {
+    min-height: 50px;
+}
+
+.costs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.seller_info-box {
+    font-size: 15px;
+
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.seller_info-box p {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.buyer_group {
+    font-size: 15px;
+    padding: 4px;
+}
+
+.buyer_group p.buyer-info {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom: 3px solid black;
+}
+
+.buyer_group p.ettn {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+}
+
+.invoice_info-box {
+    padding-bottom: 40px;
+}
+
+.invoice_info-box table.invoice-info {
+    text-align: left;
+    width: 100%;
+}
+
+table.invoice-info th,
+table.invoice-info td {
+    padding-left: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+table.invoice-info th {
+    width: 40%;
+}
+
+table.invoice-info td {
+    width: 60%;
+}
+
+.products-container table.services {
+    width: 100%;
+}
+
+.products-container table.services thead {
+    font-weight: bold;
+}
+
+.products-container table.services tbody td{
+    padding-left: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.products-container table.services tbody td.right {
+    text-align: end;
+    padding-right: 3px;
+}
+
+.products-container table.services thead th.width_10 {
+    width: 10%;
+}
+
+.products-container table.services thead th.width_25 {
+    width: 25%;
+}
+
+.products-container table.services thead th.width_15 {
+    width: 15%;
+}
+
+.costs-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.costs-container table {
+    width: 35%;
+    text-align: end;
+}
+
+.costs-container table th {
+    padding-right: 7px;
+}
+.costs-container table td {
+    padding-right: 4px;
+}
+
+.footer-container {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+
+.footer-container .lower_footer {
+    padding-top: 15px;
+    padding-bottom: 3px;
+}
+
+
+
+

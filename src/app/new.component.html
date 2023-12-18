@@ -1,0 +1,177 @@
+<div class="frame">
+    <div class="outer_frame_left">
+        <button type="button" (click)="saveMultiple()">3x Download</button>
+        <button type="button" (click)="openPDF()">Download PDF</button>
+    </div>
+    <div id="inner_frame" class="inner_frame">
+        <div class="upper_half-container">
+            <div class="adress-containers">
+                <div class="seller_info-box">
+                    <p>
+                        {{getSatici().ad}} <br>
+                        {{getSatici().adres1}} <br>
+                        {{getSatici().adres2}} <br>
+                        E-Posta: {{getSatici().posta}} <br>
+                        Vergi Dairesi: {{getSatici().vergiDairesi}} <br>
+                        VKN: {{getSatici().vkn}} <br>
+                        TICARETSICILNO: {{getSatici().ticaretSicilNo}} <br>
+                        MERSISNO: {{getSatici().mersisNo}} <br>
+                    </p>
+                </div>
+                <div class="buyer_group">
+                    <div class="buyer_info-box">
+                        <P class="buyer-info">
+                            <strong>SAYIN</strong> <br>
+                            {{getAlici().ad}} <br>
+                            {{getAlici().adres1}}<br>
+                            {{getAlici().adres2}} <br>
+                            E-Posta: {{getAlici().posta}}<br>
+                            Tel: {{getAlici().telNo}} <br>
+                            TCKN: {{getAlici().tckn}}
+                        </P>
+                    </div>
+                    <div class="ettn-box">
+                        <p class="ettn"><strong>ETTN:</strong> {{getEttn()}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="img-containers">
+                <div class="img-container_1">
+                    <img src="../assets/vergiDairesi.jpg" alt="Vergi Dairesi Başkanlığı Logo">
+                </div>
+                <div class="img-container_2">
+                    <img src="../assets/imza.jpg" alt="İmza-Kaşe">
+                </div>
+            </div>
+            <div class="invoice_info-container">
+                <div class="invoice_info-box">
+                    <table class="invoice-info">
+                        <tr>
+                            <th>Özelleştirme No:</th>
+                            <td>{{getFaturaBilgileri().ozellestirmeNo}}</td>
+                        </tr>
+                        <tr>
+                            <th>Senaryo</th>
+                            <td>{{getFaturaBilgileri().senaryo}}</td>
+                        </tr>
+                        <tr>
+                            <th>Fatura Tipi:</th>
+                            <td>{{getFaturaBilgileri().faturaTipi}}</td>
+                        </tr>
+                        <tr>
+                            <th>FaturaNo:</th>
+                            <td>{{getFaturaBilgileri().faturaNo}}</td>
+                        </tr>
+                        <tr>
+                            <th>Fatura Tarihi:</th>
+                            <td>{{getFaturaBilgileri().faturaTarihi}}</td>
+                        </tr>
+                        <tr>
+                            <th>Fatura Saati</th>
+                            <td>{{getFaturaBilgileri().faturaSaati}}</td>
+                        </tr>
+                        <tr>
+                            <th>Gönderim Tarihi</th>
+                            <td>{{getFaturaBilgileri().gonderimTarihi}}</td>
+                        </tr>
+                        <tr>
+                            <th>Muhasebe Fatura No:</th>
+                            <td>{{getFaturaBilgileri().muhasebeFaturaNo}}</td>
+                        </tr>
+                        <tr>
+                            <th>Satış Kanalı:</th>
+                            <td>{{getFaturaBilgileri().satisKanali}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="lower_half-container">
+            <div class="products-container">
+                <table class="services">
+                    <thead>
+                        <tr>
+                            <th class="width_10">Sıra No</th>
+                            <th class="width_10">Stok Kodu</th>
+                            <th class="width_25">Mal Hizmet</th>
+                            <th class="width_10">Miktar</th>
+                            <th class="width_15">Birim Fiyat</th>
+                            <th class="width_10">KDV Oranı</th>
+                            <th class="width_10">KDV Tutarı</th>
+                            <th class="width_10">Mal Hizmet Tutarı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let urun of getUrunler()">
+                            <td>{{urun.siraNo}}</td>
+                            <td>{{urun.stokKodu}}</td>
+                            <td>{{urun.malHizmet}}</td>
+                            <td class="right">{{urun.miktar}}</td>
+                            <td class="right">{{urun.birimFiyati}}</td>
+                            <td class="right">%{{urun.kdvOrani}}</td>
+                            <td class="right">{{urun.kdvTutari}}</td>
+                            <td class="right">{{urun.malHizmetTutari}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="costs-container">
+                <table class="costs-table">
+                    <tr>
+                        <th>Mal Hizmet Toplam Tutarı</th>
+                        <td>{{getFiyatBilgileri().malHizmetToplamTutari}}</td>
+                    </tr>
+                    <tr>
+                        <th>Toplam İskonto</th>
+                        <td>{{getFiyatBilgileri().toplamIskonto}}</td>
+                    </tr>
+                    <tr>
+                        <th>Hesaplanan KDV(%18)</th>
+                        <td>{{getFiyatBilgileri().hesaplananKdv}}</td>
+                    </tr>
+                    <tr>
+                        <th>KDV Dahil Toplam Tutar</th>
+                        <td>{{getFiyatBilgileri().kdvDahilToplamTutar}}</td>
+                    </tr>
+                    <tr>
+                        <th>Hesaplanan KDV Tevkifat (%50)</th>
+                        <td>{{getFiyatBilgileri().hesaplananKdvTevfikati}}</td>
+                    </tr>
+                    <tr>
+                        <th>Tevkifata Tabi İşlem Tutarı</th>
+                        <td>{{getFiyatBilgileri().tevfikataTabiIslemTutari}}</td>
+                    </tr>
+                    <tr>
+                        <th>Tevkifata Tabi İşlem Üzerinden Hes. KDV</th>
+                        <td>{{getFiyatBilgileri().tevfikataTabiIslemUzerindenKdv}}</td>
+                    </tr>
+                    <tr>
+                        <th>Ödenecek Tutar</th>
+                        <td>{{getFiyatBilgileri().odenecekTutar}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer-container">
+                <div class="upper_footer">
+                    <p> <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tevkifat Sebebi: </strong>
+                        {{getAltNotlar().tevfikatSebebi}}
+                        <br>{{getAltNotlar().faturaTutari}}
+                    </p>
+                </div>
+                <div class="lower_footer">
+                    <p><strong>IBAN:</strong> {{getAltNotlar().IBAN}}
+                        <strong>Banka:</strong> {{getAltNotlar().banka}}
+                        <strong>Döviz Türü:</strong> {{getAltNotlar().dovizTuru}}
+                        <strong>Açıklama: </strong> {{getAltNotlar().aciklama}}
+                    </p>
+                </div>
+                <div class="aciklama">
+                    <p>{{getAltNotlar().alt_aciklama}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer_frame_right">
+        
+    </div>
+</div>

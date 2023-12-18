@@ -13,8 +13,8 @@ import html2canvas from 'html2canvas';
     CommonModule,
     HttpClientModule,
   ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  templateUrl: './new.component.html',
+  styleUrls: ['./new.component.css'],
   providers: [HttpClient]
 })
 export class AppComponent {
@@ -78,38 +78,33 @@ export class AppComponent {
     return this.faturaModel.altNotlar
   }
 
-  aaaaaa() {
-    const element = document.getElementById('div-container');
-
-    console.log(element);
-
+  public openPDF(): void {
+    let DATA: any = document.getElementById('inner_frame');
+    console.log(DATA)
+    html2canvas(DATA).then((canvas) => {
+      let fileWidth = 210;
+      let fileHeight = (canvas.height * fileWidth) / canvas.width;
+      const FILEURI = canvas.toDataURL('image/png');
+      let PDF = new jsPDF('p', 'mm', 'a4');
+      let position = 0;
+      PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
+      PDF.save('angular-demo.pdf');
+    });
   }
 
-public openPDF(): void {
-  let data_top: any = document.getElementById('pdf-selector-top');
-  let data_bottom: any = document.getElementById('pdf-selector-bottom');
-
-  html2canvas(data_top).then((canvas_top) => {
-    html2canvas(data_bottom).then((canvas_bottom) => {
-      let fileWidth = 208;
-      let fileHeight_top = (canvas_top.height * fileWidth) / canvas_top.width;
-      let fileHeight_bottom = (canvas_bottom.height * fileWidth) / canvas_bottom.width;
-
-      const FILEURI_top = canvas_top.toDataURL('image/png');
-      const FILEURI_bottom = canvas_bottom.toDataURL('image/png');
-
+  public saveMultiple(): void {
+    let DATA: any = document.getElementById('inner_frame');
+    console.log(DATA)
+    html2canvas(DATA).then((canvas) => {
+      let fileHeight = 97;
+      let fileWidth = ((canvas.width * fileHeight) / canvas.height) +39;
+      const FILEURI = canvas.toDataURL('image/png');
       let PDF = new jsPDF('p', 'mm', 'a4');
-      
-      
-      PDF.addImage(FILEURI_top, 'PNG', 0, 10, fileWidth, fileHeight_top);
-
-      
-      PDF.addImage(FILEURI_bottom, 'PNG', 0, fileHeight_top + 20, fileWidth, fileHeight_bottom);
-
-      PDF.save('combined-pdf.pdf');
+      let position = 0;
+      PDF.addImage(FILEURI, 'PNG', 20, position, fileWidth, fileHeight);
+      PDF.addImage(FILEURI, 'PNG', 20, position + fileHeight, fileWidth, fileHeight);
+      PDF.addImage(FILEURI, 'PNG', 20, position + (fileHeight * 2), fileWidth, fileHeight);
+      PDF.save('angular-demo.pdf');
     });
-  });
-}
-
-
+  }
 }
